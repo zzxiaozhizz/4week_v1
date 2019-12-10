@@ -71,10 +71,11 @@ for url in urls:
         print(sub_url+'---done')
     print(url+'------DONE')
 
+
+# 通过Pandas的data frame方法，把整个room信息以及对应列名弄成一个df对象
 df = pd.DataFrame(room_info,
                   columns=['url', 'title', 'address', 'price_dayl', 'img_address', 'owner_pic_address', 'owner_gender', 'owner_name']
                   )
-
-
+# 通过to_csv方法生成csv文件
 df.to_csv('./short_rent.csv', index=True, encoding='utf-8')
 
